@@ -1,0 +1,567 @@
+      
+      :root {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    --nav-height: 76px;
+    --nav-height-scroll: 64px;
+
+
+    /* =========================
+       COLORS
+    ========================= */
+
+    --bg-glass: rgba(10, 10, 10, 0.72);
+
+    --bg-glass-scroll: rgba(10, 10, 10, 0.88);
+
+    --input-bg: rgba(255, 255, 255, 0.06);
+
+    --text-main: #f5f1e8;
+
+    --text-secondary: #b8b3aa;
+
+    --text-muted: #8e8a82;
+
+    --gold: #c9a44c;
+
+    --gold-light: #e4c76b;
+
+    --border-subtle: rgba(255, 255, 255, 0.10);
+
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    --transition: all 0.3s ease;
+}
+        /*   NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    height: var(--nav-height);
+    padding: 0 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Glass Effect */
+    background: var(--bg-glass);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+
+    border-bottom: 1px solid var(--border-subtle);
+
+    transition:
+        height 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* ==========================================================
+   SCROLLED NAVBAR
+   ========================================================== */
+
+.navbar.scrolled {
+    height: var(--nav-height-scroll);
+
+    background: var(--bg-glass-scroll);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.nav-logo-text {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    color: var(--text-main);
+}
+
+.nav-logo-text span {
+    color: var(--gold);
+}
+
+
+/* ==========================================================
+   DESKTOP NAVIGATION
+   ========================================================== */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+
+    display: block;
+
+    padding: 7px 15px;
+
+    color: var(--text-muted);
+    text-decoration: none;
+
+    font-size: 13.5px;
+    font-weight: 400;
+
+    border-radius: 9px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* Active / Hover Underline */
+
+.nav-links a::after {
+    content: '';
+
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 4px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Hover + Active */
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-main);
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+.nav-links a.active {
+    color: inherit;
+}
+
+.nav-links a.active::after {
+    background: var(--gold);
+    
+}
+/* ==========================================================
+   NAV ACTIONS
+   ========================================================== */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-icon-btn {
+    position: relative;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-muted);
+    background: transparent;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+.nav-icon-btn:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.nav-icon-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* ==========================================================
+   CART COUNT
+   ========================================================== */
+
+.cart-count {
+    position: absolute;
+
+    top: 6px;
+    right: 6px;
+
+    width: 8px;
+    height: 8px;
+
+    background: var(--gold);
+
+    border: 1.5px solid #090909;
+    border-radius: 50%;
+}
+
+
+/* ==========================================================
+   CTA BUTTON
+   ========================================================== */
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 9px 22px;
+
+    color: #0d0b08;
+    background: var(--gold);
+
+    border: none;
+    border-radius: 100px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+}
+
+.btn-cta svg {
+    width: 14px;
+    height: 14px;
+}
+
+
+/* ==========================================================
+   HAMBURGER
+   ========================================================== */
+
+.hamburger {
+    display: none;
+
+    width: 38px;
+    height: 38px;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    padding: 8px;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 9px;
+
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 1.5px;
+
+    background: var(--text-main);
+
+    border-radius: 2px;
+
+    transition: transform 0.3s ease,
+                opacity 0.3s ease;
+}
+
+
+/* Hamburger → X */
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+
+/* ==========================================================
+   MOBILE MENU
+   ========================================================== */
+
+.mobile-menu {
+    position: fixed;
+
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+
+    z-index: 999;
+
+    padding: 12px 20px 24px;
+
+    background: rgba(6, 6, 6, 0.97);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border-bottom: 1px solid var(--border-subtle);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+}
+
+.mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+
+/* Mobile Links */
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+}
+
+.mobile-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 10px;
+
+    color: var(--text-main);
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+.mobile-links a:hover,
+.mobile-links a.active {
+    color: var(--gold);
+}
+
+.mobile-links a:hover {
+    padding-left: 16px;
+    
+}
+
+.mobile-links svg {
+    width: 14px;
+    height: 14px;
+
+    opacity: 0.3;
+}
+
+
+/* Mobile Actions */
+
+.mobile-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+.mobile-actions .btn-cta,
+.mobile-actions .btn-outline {
+    flex: 1;
+    justify-content: center;
+}
+
+
+/* ==========================================================
+   OUTLINE BUTTON
+   ========================================================== */
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 9px 22px;
+
+    color: var(--text-main);
+
+    border: 1px solid var(--border-subtle);
+    border-radius: 100px;
+
+    font-size: 13px;
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+.mobile-links a.active {
+    color: var(--gold-light);
+    padding-left: 16px;
+}
+
+.mobile-links a.active svg {
+    opacity: 1;
+    color: var(--gold-light);
+}
+/* ==========================================================
+   NAVIGATION LINK UNDERLINE
+   ========================================================== */
+
+.nav-links a {
+    position: relative;
+}
+
+
+/* Animated Gold Underline */
+
+.nav-links a::after {
+    content: '';
+
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+    bottom: 4px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.35s ease;
+}
+
+
+/* Hover + Active */
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+
+
+/* ==========================================================
+   HAMBURGER HOVER
+   ========================================================== */
+
+.hamburger:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.hamburger:hover span {
+    background: var(--gold);
+}
+.hamburger span {
+    transition: var(--transition);
+}
+
+/* ==========================================================
+   RESPONSIVE NAVBAR
+   ========================================================== */
+
+@media (max-width: 968px) {
+
+    /* Use the compact phone spacing shown in the reference on every page.
+       The element-qualified selector keeps page-specific styles from
+       overriding this shared mobile layout. */
+    nav.navbar {
+        padding-inline: 5%;
+    }
+
+    .nav-links,
+    .nav-actions .nav-icon-btn,
+    .nav-actions .btn-cta {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+  
+  
+}

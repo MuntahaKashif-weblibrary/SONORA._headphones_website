@@ -1,0 +1,386 @@
+/* Page-Specific Styles for About / Our Story */
+        .story-hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(var(--nav-height) + 4rem) 2rem 6rem;
+            background: radial-gradient(circle at center, #141414 0%, #0a0a0a 100%);
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-subtle);
+            text-align: center;
+        }
+
+        .story-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.2) 40%, var(--bg-main, #0a0a0a));
+            pointer-events: none;
+        }
+
+        .story-hero-content {
+            max-width: 900px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .story-hero .eyebrow {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--gold, #d4af37);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .story-hero h1 {
+            font-size: clamp(2.75rem, 5vw, 5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--text-main, #f5f5f7);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            overflow-y: hidden;
+        }
+
+        .story-hero p {
+            color: var(--text-muted, #a1a1a6);
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin: 0 auto 2.5rem;
+            max-width: 600px;
+        }
+
+        /* Editorial Two-Column Section */
+        .editorial-section {
+            max-width: 1300px;
+            margin: 8rem auto;
+            padding: 0 2rem;
+        }
+
+        .editorial-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .editorial-row.reverse {
+            direction: rtl;
+        }
+
+        .editorial-row.reverse > * {
+            direction: ltr;
+        }
+
+        .editorial-img-container {
+            width: 100%;
+            height: 550px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .editorial-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: brightness(0.9);
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .editorial-img-container:hover img {
+            transform: scale(1.03);
+        }
+
+        .editorial-text .eyebrow {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--gold, #d4af37);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .editorial-text h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 300;
+            color: var(--text-main, #f5f5f7);
+            line-height: 1.2;
+            margin-bottom: 1.75rem;
+            letter-spacing: -0.02em;
+            overflow-y: hidden;
+        }
+
+        .editorial-text p {
+            color: var(--text-muted, #a1a1a6);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Brand Philosophy Statement */
+        .philosophy-banner {
+            background: #111;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 9rem 2rem;
+            text-align: center;
+        }
+
+        .philosophy-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .philosophy-inner h2 {
+            font-size: clamp(2.25rem, 4.5vw, 4.25rem);
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--text-main, #f5f5f7);
+            letter-spacing: -0.02em;
+            overflow-y: hidden;
+        }
+
+        .philosophy-inner h2 span {
+            color: var(--gold, #d4af37);
+        }
+
+        /* Three Brand Principles */
+        .principles-section {
+            max-width: 1300px;
+            margin: 8rem auto;
+            padding: 0 2rem;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3.5rem;
+        }
+
+        .principle-col {
+            border-top: 1px solid var(--border-subtle, rgba(255,255,255,0.15));
+            padding-top: 2.5rem;
+        }
+
+        .principle-col h3 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--text-main, #f5f5f7);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        .principle-col p {
+            color: var(--text-muted, #a1a1a6);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Cinematic Quote Section */
+        .quote-section {
+            width: 100%;
+            min-height: 550px;
+            position: relative;
+            background: #080808;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            overflow: hidden;
+        }
+
+        .quote-bg-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.3);
+            z-index: 1;
+        }
+
+        .quote-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .quote-content blockquote {
+            font-size: clamp(2rem, 3.5vw, 3.25rem);
+            font-weight: 300;
+            line-height: 1.3;
+            color: var(--text-main, #f5f5f7);
+            letter-spacing: -0.01em;
+            margin: 0;
+        }
+
+        .quote-content blockquote span {
+            color: var(--gold, #d4af37);
+        }
+
+        /* Our Approach Steps */
+        .approach-section {
+            max-width: 1300px;
+            margin: 8rem auto;
+            padding: 0 2rem;
+        }
+
+        .approach-header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .approach-header .eyebrow {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--gold, #d4af37);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .approach-header h2 {
+            font-size: clamp(2rem, 3vw, 2.75rem);
+            font-weight: 300;
+            color: var(--text-main, #f5f5f7);
+            letter-spacing: -0.01em;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .approach-card {
+            background: #111;
+            border: 1px solid var(--border-subtle, rgba(255,255,255,0.1));
+            padding: 3rem 2.5rem;
+            border-radius: 4px;
+        }
+
+        .approach-num {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--gold, #d4af37);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            font-family: monospace;
+        }
+
+        .approach-card h3 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--text-main, #f5f5f7);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .approach-card p {
+            color: var(--text-muted, #a1a1a6);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Final Cinematic CTA */
+        .story-cta {
+            background: linear-gradient(to bottom, var(--bg-main, #0a0a0a), #141414);
+            border-top: 1px solid var(--border-subtle, rgba(255,255,255,0.1));
+            padding: 9rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .story-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .story-cta h2 {
+            font-size: clamp(2.5rem, 4.5vw, 4rem);
+            font-weight: 300;
+            color: var(--text-main, #f5f5f7);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            overflow-y: hidden;
+        }
+
+        .story-cta p {
+            color: var(--text-muted, #a1a1a6);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+/* Ensure anchor buttons on this page match product button behavior */
+.btn-gold-shine,
+a.btn-gold-shine {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+        .add-btn {
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black, #080808);
+            background: linear-gradient(120deg, var(--gold-bright, #eecf8a), var(--gold, #c9a44c) 55%, var(--gold-deep, #8a6d2f));
+            border: none;
+            padding: 0.85rem 1.35rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            border-radius: 2px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .add-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.55), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.6s ease;
+        }
+
+        .add-btn:hover::before {
+            left: 130%;
+        }
+
+        .add-btn:hover {
+            box-shadow: 0 8px 24px -6px rgba(201, 164, 76, 0.55);
+            transform: translateY(-2px);
+        }
+   
+        /* Responsive Breakpoints */
+        @media(max-width: 1024px) {
+            .editorial-row, .editorial-row.reverse {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                direction: ltr;
+            }
+            .principles-grid, .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .story-hero {
+                padding-top: calc(var(--nav-height) + 2rem);
+            }
+        }
