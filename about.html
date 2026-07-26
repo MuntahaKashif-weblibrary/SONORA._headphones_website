@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | SONORA — Premium Audio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <body>
+
+    <!-- REUSABLE NAVBAR CONTAINER -->
+    <div id="navbar-container"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="story-hero">
+        <div class="story-hero-content">
+            <span class="eyebrow">THE SONORA STORY</span>
+            <h1>Sound, Made Personal.</h1>
+            <p>We believe the best listening experiences are the ones that make the world feel a little more yours.</p>
+        </div>
+    </section>
+
+    <!-- 2. ORIGIN STORY SECTION -->
+    <section class="editorial-section">
+        <div class="editorial-row">
+            <div class="editorial-img-container">
+                <img src="images/premium-left.jfif" alt="SONORA Origin Story">
+            </div>
+            <div class="editorial-text">
+                <span class="eyebrow">WHERE IT BEGAN</span>
+                <h2>It Started With Listening.</h2>
+                <p>SONORA was created around a simple idea: the way we listen shapes the way we experience the world.</p>
+                <p>From the quiet moments of a morning commute to the songs that stay with us long after they end, sound has always been deeply personal.</p>
+                <p>We wanted to create headphones that respect that relationship.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. BRAND PHILOSOPHY -->
+    <section class="philosophy-banner">
+        <div class="philosophy-inner">
+            <h2>WE DON'T BELIEVE IN MORE NOISE.<br><span>WE BELIEVE IN BETTER LISTENING.</span></h2>
+        </div>
+    </section>
+
+    <!-- 4. THREE BRAND PRINCIPLES -->
+    <section class="principles-section">
+        <div class="principles-grid">
+            <div class="principle-col">
+                <h3>LISTEN DEEPLY</h3>
+                <p>Every detail begins with the intimate experience of sound, capturing every nuance and spatial dimension as the artist intended.</p>
+            </div>
+            <div class="principle-col">
+                <h3>DESIGN INTENTIONALLY</h3>
+                <p>Nothing should exist without a reason. Every line, material, and curve serves both acoustic precision and enduring aesthetic value.</p>
+            </div>
+            <div class="principle-col">
+                <h3>LIVE IN THE MOMENT</h3>
+                <p>The best listening experience is the one that dissolves the boundaries around you and brings you fully into the present.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DESIGN AND SOUND SECTION -->
+    <section class="editorial-section">
+        <div class="editorial-row reverse">
+            <div class="editorial-img-container">
+                <img src="images/premium-right.jfif" alt="SONORA Form Meets Function">
+            </div>
+            <div class="editorial-text">
+                <span class="eyebrow">FORM MEETS FUNCTION</span>
+                <h2>Everything You Feel.<br>Everything You Hear.</h2>
+                <p>From the shape of every curve to the balance of every sound, SONORA is designed around the idea that technology should feel entirely natural.</p>
+                <p>Beautiful enough to belong in your personal space. Thoughtful enough to disappear completely when the music begins.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. BRAND STATEMENT SECTION -->
+    <section class="quote-section">
+        <img src="images/bottom hero.jfif" alt="SONORA Acoustic Atmosphere" class="quote-bg-img">
+        <div class="quote-content">
+            <blockquote>
+                The world is full of sound.<br><br>
+                <span>We are here to help you choose what to listen to.</span>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- 7. OUR APPROACH -->
+    <section class="approach-section">
+        <div class="approach-header">
+            <span class="eyebrow">OUR METHODOLOGY</span>
+            <h2>The Architecture of an Experience</h2>
+        </div>
+        <div class="approach-grid">
+            <div class="approach-card">
+                <div class="approach-num">01</div>
+                <h3>LISTEN</h3>
+                <p>Understand the intimate moments people want to escape into and the sonic textures that define them.</p>
+            </div>
+            <div class="approach-card">
+                <div class="approach-num">02</div>
+                <h3>DESIGN</h3>
+                <p>Create acoustic technology that feels completely effortless, tactile, and visually timeless.</p>
+            </div>
+            <div class="approach-card">
+                <div class="approach-num">03</div>
+                <h3>REFINE</h3>
+                <p>Keep improving every minute detail that shapes the everyday relationship between ear and audio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CTA SECTION -->
+    <section class="story-cta">
+        <div class="story-cta-content">
+            <h2>YOUR WORLD.<br>YOUR SOUND.</h2>
+            <p>Discover the collection created for the way you listen.</p>
+            <a href="collections.html" class="btn-gold-shine">EXPLORE THE COLLECTION</a>
+        </div>
+    </section>
+
+    <!-- EXISTING SCRIPTS -->
+    <script src="nav.js"></script>
+    <script>
+        // Page-specific subtle entrance animation triggers
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.editorial-section, .principles-section, .approach-section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(sec => {
+                sec.style.opacity = '0';
+                sec.style.transform = 'translateY(20px)';
+                sec.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+                observer.observe(sec);
+            });
+        });
+    </script>
+</body>
+</html>

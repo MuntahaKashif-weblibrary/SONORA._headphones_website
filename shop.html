@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHOP COLLECTION</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="grain"></div>
+
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-ring"></div>
+    <div class="hero-ring r2"></div>
+    <div class="hero-glow"></div>
+    <span class="eyebrow">Shop the Collection</span>
+    <h1>Find Your <em>Perfect</em><br>Sound.</h1>
+    <p>Explore our collection of immersive audio, designed for every way you listen.</p>
+    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+  </section>
+
+  <!-- FILTER -->
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-filter="all">All Products</button>
+    <button class="filter-btn" data-filter="headphones">Headphones</button>
+    <button class="filter-btn" data-filter="earbuds">Earbuds</button>
+    <button class="filter-btn" data-filter="accessories">Accessories</button>
+  </div>
+
+        <!-- PRODUCT GRID -->
+  <section>
+    <div class="section-head">
+      <span class="eyebrow">Curated Range</span>
+      <h2>Engineered for the Listener</h2>
+    </div>
+
+    <div class="grid" id="productGrid">
+
+      <!-- Card 1 -->
+      <article class="card" data-cat="headphones">
+        <div class="card-media">
+          <span class="card-tag">Headphones</span>
+          <img
+            src="images/product-01.jfif"
+            loading="lazy" alt="headphones-1">
+        </div>
+        <div class="card-body">
+          <h3>Premium Wireless Headphones</h3>
+          <p class="desc">Precision-tuned drivers wrapped in aluminum and full-grain leather.</p>
+          <div class="card-footer">
+            <span class="price">$429</span>
+            <button class="btn-gold-shine">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-cat="headphones">
+        <div class="card-media">
+          <span class="card-tag">Headphones</span>
+          <img
+            src="images/product-02.jfif"
+            loading="lazy" alt="headphone-2">
+        </div>
+        <div class="card-body">
+          <h3>Noise Cancelling Headphones</h3>
+          <p class="desc">Adaptive silence engineering for total immersion, anywhere.</p>
+          <div class="card-footer">
+            <span class="price">$499</span>
+            <button class="btn-gold-shine">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-cat="earbuds">
+        <div class="card-media">
+          <span class="card-tag">Earbuds</span>
+          <img
+            src="images/product-03.jfif"
+            alt="earbuds-1" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>True Wireless Earbuds</h3>
+          <p class="desc">Featherlight titanium shells with all-day adaptive comfort.</p>
+          <div class="card-footer">
+            <span class="price">$249</span>
+            <button class="btn-gold-shine">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+      <!-- card 4 -->
+      <article class="card" data-cat="earbuds">
+        <div class="card-media">
+          <span class="card-tag">Earbuds</span>
+          <img
+            src="images/product-04.jfif"
+            alt="earbuds-2" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>True Wireless Earbuds</h3>
+          <p class="desc">Featherlight titanium shells with all-day adaptive comfort.</p>
+          <div class="card-footer">
+            <span class="price">$249</span>
+            <button class="btn-gold-shine">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" data-cat="headphones">
+        <div class="card-media">
+          <span class="card-tag">Headphones</span>
+          <img
+            src="images/product-05.jfif"
+            alt="headphone-3" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Studio Headphones</h3>
+          <p class="desc">Reference-grade flat response for critical listening and mixing.</p>
+          <div class="card-footer">
+            <span class="price">$389</span>
+            <button class="btn-gold-shine">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card" data-cat="accessories">
+        <div class="card-media">
+          <img
+            src="images/product-06.jfif"
+            alt="accessory-1" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Portable Audio Accessories</h3>
+          <p class="desc">Charging cases, braided cables, and travel essentials in leather.</p>
+          <div class="card-footer">
+            <span class="price">$89</span>
+            <button class="btn-gold-shine">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+      <!-- Card 6 -->
+      <article class="card" data-cat="accessories">
+        <div class="card-media">
+          <img
+            src="images/product-07.jfif"
+            alt="accessory-2" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Portable Audio Accessories</h3>
+          <p class="desc">Charging cases, braided cables, and travel essentials in leather.</p>
+          <div class="card-footer">
+            <span class="price">$89</span>
+            <button class="btn-gold-shine">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+      <!-- Card  7-->
+      <article class="card" data-cat="accessories">
+        <div class="card-media">
+          <img
+            src="images/product-08.jfif"
+            alt="accessory-3" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Portable Audio Accessories</h3>
+          <p class="desc">Charging cases, braided cables, and travel essentials in leather.</p>
+          <div class="card-footer">
+            <span class="price">$89</span>
+            <button class="btn-gold-shine">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card" data-cat="earbuds">
+        <div class="card-media">
+          <span class="card-tag">Earbuds</span>
+          <img
+            src="images/product-09.jfif"
+            alt="earbuds-3" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>Compact Charging Case</h3>
+          <p class="desc">Pocketable brushed-metal case with 30 hours of reserve power.</p>
+          <div class="card-footer">
+            <span class="price">$59</span>
+            <button class="btn-gold-shine">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FEATURED COLLECTION -->
+<section class="featured">
+  <div class="section-head">
+    <span class="eyebrow">Featured Collection</span>
+    <h2>The Signature Piece</h2>
+  </div>
+
+  <div class="featured-grid">
+    <div class="featured-media">
+        <img class="card"
+        src="images/product-01.jfif"
+        alt="limited-edition">
+      
+    </div>
+    <div class="featured-text">
+      <span class="eyebrow">Limited Edition</span>
+      <h2>The Sovereign<br>Over-Ear</h2>
+      <div class="featured-meta">
+        <span class="featured-price">$799</span>
+        <span class="featured-stars">★★★★★</span>
+      </div>
+      <p>Hand-finished in 24k gold-plated aluminum with Ethiopian full-grain leather ear cushions, the Sovereign houses our proprietary 42mm beryllium drivers — a listening instrument built for those who hear the difference.</p>
+      <button class="btn-outline-explore"><span>Explore the Sovereign</span></button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- PROMO -->
+<section class="promo">
+  <div class="promo-glow"></div>
+
+  <span class="eyebrow">The Invitation</span>
+
+  <h2>Your Sound. <span class="accent">Your World.</span></h2>
+
+  <a href="collections.html" class="btn-outline-explore">
+   <span> Explore Collection</span>
+  </a>
+</section>
+
+ <!-- ==========================================================
+     FOOTER
+     ========================================================== -->
+<footer>
+    <div class="footer-container-shop">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <a href="index.html" class="nav-logo">SONORA.</a>
+            <p>
+                Architectural sound engineering for the uncompromising listener.
+            </p>
+        </div>
+
+        <!-- Products -->
+        <div class="footer-links-group">
+            <h4>Products</h4>
+            <ul>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="shop.html">Shop All</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+
+        <!-- Explore -->
+        <div class="footer-links-group">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="index.html">Discover</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="support.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links-group">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="support.html">Client Care</a></li>
+                <li><a href="support.html">Warranty & Repairs</a></li>
+                <li><a href="support.html">Product Registration</a></li>
+                <li><a href="support.html">FAQs</a></li>
+            </ul>
+        </div>
+    
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 SONORA Audio Inc. All rights reserved.</p>
+
+        <div style="display: flex; gap: 2rem;">
+            <a href="support.html">Privacy Policy</a>
+            <a href="support.html">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+<script src="nav.js"></script>
+
+  <script>
+    // Category filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.filter;
+        cards.forEach(card => {
+          const show = cat === 'all' || card.dataset.cat === cat;
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    cards.forEach(c => observer.observe(c));
+   
+  </script>
+
+</body>
+
+</html>
