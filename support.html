@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONORA — Support Center</title>
+    
+    <!-- Shared Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Support Page Specific CSS -->
+    <link rel="stylesheet" href="css/support.css">
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+
+    <!-- Shared Navigation Bar Container -->
+    <div id="navbar-container"></div>
+
+    <main class="support-main">
+        <!-- 1. Support Hero Section -->
+        <section class="support-hero">
+            <div class="support-hero-content">
+                <span class="support-eyebrow">SONORA SUPPORT</span>
+                <h1 class="support-title">How Can We Help?</h1>
+                <p class="support-subtitle">Find answers, get product help, and make the most of your SONORA experience.</p>
+                
+                <div class="support-search-wrapper">
+                    <svg class="support-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="faq-search" class="support-search-input" placeholder="Search for help..." aria-label="Search for help">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Quick Help Categories -->
+        <section class="support-categories">
+            <div class="support-container">
+                <div class="categories-grid">
+                    <a href="#orders-shipping" class="category-card">
+                        <div class="category-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                        </div>
+                        <h3>ORDERS & SHIPPING</h3>
+                        <p>Track your order and find answers about delivery.</p>
+                    </a>
+
+                    <a href="#returns-refunds" class="category-card">
+                        <div class="category-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                        </div>
+                        <h3>RETURNS & REFUNDS</h3>
+                        <p>Learn about returns, exchanges, and refunds.</p>
+                    </a>
+
+                    <a href="#product-support" class="category-card">
+                        <div class="category-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                        </div>
+                        <h3>PRODUCT SUPPORT</h3>
+                        <p>Get help setting up and using your SONORA headphones.</p>
+                    </a>
+
+                    <a href="#contact-us" class="category-card">
+                        <div class="category-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h3>CONTACT US</h3>
+                        <p>Still need help? Get in touch with the SONORA team.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. FAQ Section -->
+        <section class="support-faq-section" id="faq">
+            <div class="support-container-narrow">
+                <div class="section-header-center">
+                    <span class="support-eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+                    <h2 class="section-title">Answers, Without The Noise.</h2>
+                </div>
+
+                <div class="faq-accordion" id="faqAccordion">
+                    <div class="faq-item" data-category="orders">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I track my order?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Once your order has shipped, you will receive a confirmation email containing your tracking number and a direct link to follow your package's journey to your door.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="orders">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How long does shipping take?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Standard delivery typically takes 3-5 business days. Express shipping options are available at checkout for expedited delivery within 1-2 business days.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="product">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I connect my headphones?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Power on your SONORA headphones by holding the power button for 3 seconds until the status indicator flashes. Open your device's Bluetooth settings and select your SONORA model to pair.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="product">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I charge my headphones?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Use the provided USB-C cable connected to a certified 5V power adapter. A full charge takes approximately 2 hours and provides up to 40 hours of continuous playback with Active Noise Cancellation enabled.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="returns">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I request a return?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day trial period for all purchases. To initiate a return, reach out to our support team with your order number and we will provide a prepaid return shipping label.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="support">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What should I do if I need product support?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>If you encounter any technical difficulties, fill out the contact form below with your product serial number and details. Our audio specialists will assist you promptly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Support Information Section -->
+        <section class="support-info-section">
+            <div class="support-container">
+                <div class="info-grid">
+                    <div class="info-card" id="orders-shipping">
+                        <div class="info-number">01</div>
+                        <h3>ORDER HELP</h3>
+                        <p>Need help with an existing order? Have your order details ready when contacting support.</p>
+                    </div>
+                    <div class="info-card" id="product-support">
+                        <div class="info-number">02</div>
+                        <h3>PRODUCT HELP</h3>
+                        <p>Need help with your headphones? Tell us which SONORA product you are using.</p>
+                    </div>
+                    <div class="info-card" id="returns-refunds">
+                        <div class="info-number">03</div>
+                        <h3>GENERAL QUESTIONS</h3>
+                        <p>Have another question? Send us a message and our team will help.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Support Contact Section -->
+        <section class="support-contact-section" id="contact-us">
+            <div class="support-container-narrow">
+                <div class="section-header-center">
+                    <span class="support-eyebrow">STILL NEED HELP?</span>
+                    <h2 class="section-title">Let's Get Things Sorted.</h2>
+                    <p class="section-subtitle">Tell us what you need help with and we'll point you in the right direction.</p>
+                </div>
+
+                <form class="support-form" id="supportForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="support-name">Name</label>
+                            <input type="text" id="support-name" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="support-email">Email</label>
+                            <input type="email5" id="support-email" required placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="support-subject">Subject</label>
+                        <input type="text" id="support-subject" required placeholder="What is this regarding?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="support-message">Message</label>
+                        <textarea id="support-message" rows="5" required placeholder="Describe how we can assist you..."></textarea>
+                    </div>
+
+                    <div class="form-submit-wrap">
+                        <button type="submit" class="btn-gold-shine">SEND MESSAGE</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- 6. Final CTA Section -->
+        <section class="support-cta-section">
+            <div class="support-container-narrow text-center">
+                <h2 class="cta-title">YOUR LISTENING EXPERIENCE MATTERS.</h2>
+                <p class="cta-subtitle">When you're ready, discover the sound created for the way you listen.</p>
+                <div class="cta-button-wrap">
+                    <a href="collections.html" class="btn-gold-shine">EXPLORE THE COLLECTION</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Navigation Script -->
+    <script src="nav.js"></script>
+
+    <!-- Support Page Specific JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // FAQ Accordion Logic
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const questionBtn = item.querySelector('.faq-question');
+                
+                questionBtn.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all accordion items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    });
+
+                    // If it wasn't active before, open it
+                    if (!isActive) {
+                        item.classList.add('active');
+                        questionBtn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // FAQ Search Filtering Logic
+            const searchInput = document.getElementById('faq-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase().trim();
+                    
+                    faqItems.forEach(item => {
+                        const questionText = item.querySelector('.faq-question span').textContent.toLowerCase();
+                        const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+                        if (questionText.includes(term) || answerText.includes(term)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            // Form Submission Simulation
+            const supportForm = document.getElementById('supportForm');
+            if (supportForm) {
+                supportForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const submitBtn = supportForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    
+                    submitBtn.textContent = 'MESSAGE SENT';
+                    submitBtn.style.opacity = '0.7';
+                    submitBtn.setAttribute('disabled', 'true');
+
+                    setTimeout(() => {
+                        supportForm.reset();
+                        submitBtn.textContent = originalText;
+                        submitBtn.style.opacity = '1';
+                        submitBtn.removeAttribute('disabled');
+                        alert('Thank you. Your message has been received by the SONORA team.');
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
